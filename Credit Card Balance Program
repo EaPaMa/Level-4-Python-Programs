@@ -1,0 +1,114 @@
+#Module: Introductory Programming and Problem solving
+#Coding Challenge 5: Functions
+
+
+#Elizabeth Austin
+#SN: 1725049
+#Credit Card Decreasing balance, and accumulating interest paid on a credit
+#card balance. Also includes interest rate and monthly re-payment.
+
+
+
+
+#welcoming message function
+def welcome():
+    print("************************Credit Card Balance************************\n")
+    print("This program will determine the time to pay off a credit\ncard balance, the interest rate, and the monthly payments made.\n")
+welcome()
+
+#statement function
+def statement():
+
+    balance=(int(input("Enter the balance on your credit card: £")))    
+
+    rate=(float(input("Enter the interest rate (APR) on the card: ")))
+
+    print("Please enter a number(s) for your credit card interest rate")
+
+    print("Assuming a minimum payment of 2% of the balance (£20 min).\nYour minimum payment would be £20.00.\n")
+
+    minimum = input("Use the minimum monthly payment? (y/n): ")
+    
+    if minimum == "y" or minimum == "Y":
+
+        if balance >= 1000:
+            minimum = minimum * 0.02
+        else:
+            minimum = 20.0
+
+        
+        count = 0
+        pay_num=1
+        year=1
+        print("\nPAYOFF SCHEDULE\nYear         Balance       Payment Number    Interest Per Month   Accumulative Interest")
+        total_interest = 0
+        while balance > 0:
+            
+            interest_month = (rate / 1200) * balance
+            total_interest += interest_month
+            #deduction=20-interest_paid
+
+            balance = balance + interest_month - minimum
+            if balance < 0:
+                balance=0
+            if pay_num == 12:
+                year+=1
+            print("{:>2}".format(year),"{:>16.2f}".format(balance), "{:>15}".format(pay_num),"{:^35.2f}".format(interest_month), "{:>7.2f}".format(total_interest))
+            pay_num +=1
+            count+=1
+            
+        recalculate=input("\nRecalculate with another payment? (y/n): ")
+        if recalculate == "y" or recalculate == "Y":
+            statement()
+        elif recalculate == "n" or recalculate == "N":
+            pass
+    elif minimum == "n" or minimum == "N":
+        balance=(int(input("Enter the balance on your credit card: £")))    
+
+        rate=(float(input("Enter the interest rate (APR) on the card: ")))
+        personal=float(input("Please specify monthly repayment: "))
+        
+        
+##        if balance >= 1000:
+##            minimum = minimum * personal
+##        else:
+##            minimum = 20.0
+
+        
+        count = 0
+        pay_num=1
+        year=1
+        print("\nPAYOFF SCHEDULE\nYear         Balance       Payment Number    Interest Per Month   Accumulative Interest")
+        total_interest = 0
+        while balance > 0:
+
+            interest_month = (rate / 1200) * balance
+            total_interest += interest_month
+            #deduction=20-interest_paid
+
+            balance = balance + interest_month - personal
+            
+            if balance < 0:
+                balance=0
+            if pay_num == 12:
+                year+=1
+            print("{:>2}".format(year),"{:>16.2f}".format(balance), "{:>15}".format(pay_num),"{:^35.2f}".format(interest_month), "{:>7.2f}".format(total_interest))
+            pay_num +=1
+            count+=1
+            
+        recalculate=input("\nRecalculate with another payment? (y/n): ")
+        if recalculate == "y" or recalculate == "Y":
+            statement()
+        elif recalculate == "n" or recalculate == "N":
+            pass
+statement()
+
+##########--------------------MAIN-------------------############
+
+
+#calling welcome function
+welcome()
+
+#calling statement function
+statement()
+
