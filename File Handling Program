@@ -1,0 +1,41 @@
+#Module: Introductory Programming and Problem Solving
+#Coding Challenge 6: File Handling
+
+
+#Elizabeth Austin
+#SN: 1725049
+#A program that reads a text file and displays the frequency of a word
+
+
+
+print("This program will display the number of occurences of a\nspecified word within a given text file\n")
+
+#user input for file to open
+#specials = ".\/:"
+
+while True:
+    file_name = input("Enter input file name (with extension): ")
+    #name = file_name.split('.')
+    if file_name.isalnum() == True:
+        #file_name.append(".txt")
+        break
+    else:
+        print("Invalid input given. Please try again\n")
+
+#user input for word to search within the file specified
+search=input("Enter word to search: ")
+
+num=0
+#try:
+with open(file_name) as file object:
+#input_file=open(file_name, "r")
+#except FileNotFoundError:
+   # print(" FILE MISSING")
+    for line in input_file:
+        line2 = line.split(' ')
+        for word in line2:
+            if word == search:
+                num+=1
+print(search, "appeared in the file", num, "times in file", file_name)
+
+input_file.close()
