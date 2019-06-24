@@ -1,19 +1,10 @@
 #Module: Introductury Programming and Problem Solving
 #Coding Challenge 1: Data and expressions
-#Write a program that calculates the bill for a couple at a restaurant called McPython.
-#Specifications:
-
-#Prompt the user to enter the price of the items ordered by each person (appetiser, entree, drinks and desert),
-#tip percentage and the value of a gift card. Assign the inputs to variables, and convert them to the proper data types. 
-#Make sure that your variable names follow conventions (underscore case). Calculate the VAT (20%), tip and total amount due per person.
-#Display the results.
-#Challenge: format all currency values with two decimal places. (You’ll need to figure out how to do this!) 
-
 
 #Elizabeth Austin
 #SN: 1725049
-#My Code for the challenge:
 #Bill Calculation for McPython Restaurant
+
 
 print("This program will calculate the McPython bill for a couple with a gift certificate, with VAT of 20.0 %\n")
 gift_card_val=float(input("Enter Gift Certificate Value: £"))
