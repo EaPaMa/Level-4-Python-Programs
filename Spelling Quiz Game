@@ -1,0 +1,757 @@
+#Module: Introductory Programming and Problem Solving
+#Project Specification: Spelling Quiz Game
+
+
+##Elizabeth Austin
+#SN: 1725049
+#*******Spelling Utopia******
+#Python Spelling Game
+
+
+
+#Main menu where the user enters their name and chooses a difficulty 
+
+
+def FMain ():
+
+
+    import random
+
+
+    Player_score = 0
+
+    print ("*************************************************************")
+    print ("*************************************************************")
+    print ("***********************Spelling Utopia***********************")
+    print ("*************************************************************")
+    print ("*************************************************************\n")
+    Name = str(input("Please enter your name: "))
+    print ("")
+    print ("Welcome" ,Name,"to Spelling Utopia!")
+    print ("")
+    
+  
+
+
+    Dif = input("Please enter the difficulty level you wish to play\n(E) for easy, (M) for medium, or (H) for hard\n>")
+
+    while Dif != 'E' and Dif != 'e' and Dif != 'M' and Dif != 'm' and Dif!= 'H' and Dif != 'h':
+        Dif = input("Please enter a vaild choice!!: ")
+
+#Easy difficulty setting of the game
+
+    if Dif == 'E' or Dif == 'e':
+
+
+        print (Name," You are now playing on the Easy difficulty level.")
+        print ("")
+        Ready = input("Enter (Y) to begin, or (M) to return to the main menu\n>")
+
+        while Ready != 'Y' and Ready != 'y' and Ready != 'M' and Ready != 'm':
+            Ready = input("If you're ready to start please press (Y) or press (M) to go back to the main menu: ")
+
+        if Ready == 'M' or Ready == 'm':
+            FMain ()
+
+        else:
+            Ready == 'Y' or Ready == 'y'
+            print ("\nLets begin.")
+
+        #Easy questions tuple
+        solutions_easy = [ ("Queue, Qeuue, Que"), ("Receive, Recieve, Recevie"), ("Definite, Definate, Definete"),
+                           ("Vacuum, Vacum, Vacume"), ("Illicit, Ilisit, Ilissit"), ("Quite, Quiet, Quete"), ("Graffite, Grafite, Graffiti"),
+                           ("Foreign, Foriegn, Foureign"), ("Business, Busines, Bussines")]
+
+        #correct answers for easy level list
+        correct_ones_easy=["Queue", "queue", "Receive", "receive", "Definite", "definite", "Vacuum", "vacuum", "Illicit", "illicit", "quiet", "quiet",
+                           "Graffiti", "graffiti", "Foreign", "foreign", "Business", "business"]
+
+        #Shuffling of easy solutions/questions tuple
+        random.shuffle (solutions_easy)
+
+        #questions for easy level begins here
+
+        #Easy Question 1
+        print("Question 1:")
+        answered_easy1_correctly=False
+        while answered_easy1_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[0])
+
+            one_e=input("\n>")
+            if one_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif one_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy1_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+                
+        #Easy Question 2
+        print("Question 2:")
+        answered_easy2_correctly=False
+        while answered_easy2_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[1])
+
+            two_e=input("\n>")
+            if two_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif two_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy2_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 3
+        print("Question 3:")
+        answered_easy3_correctly=False
+        while answered_easy3_correctly==False:
+        
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[2])
+
+            three_e=input("\n>")
+            if three_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif three_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy3_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 4
+        print("Question 4:")
+        answered_easy4_correctly=False
+        while answered_easy4_correctly==False:
+        
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[3])
+
+            four_e=input("\n>")
+            if four_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif four_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy4_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 5
+        print("Question 5:")
+        answered_easy5_correctly=False
+        while answered_easy5_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[4])
+
+            five_e=input("\n>")
+            if five_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif five_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy5_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 6
+        print("Question 6:")
+        answered_easy6_correctly=False
+        while answered_easy6_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[5])
+
+            six_e=input("\n>")
+            if six_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif six_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy6_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 7
+        print("Question 7:")
+        answered_easy7_correctly=False
+        while answered_easy7_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[6])
+
+            seven_e=input("\n>")
+            if seven_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif seven_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy7_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+
+        #Easy Question 8
+        print("Question 8:")
+        answered_easy8_correctly=False
+        while answered_easy8_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[7])
+
+            eight_e=input("\n>")
+            if eight_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif eight_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy8_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Easy Question 9
+        print("Question 9:")
+        answered_easy9_correctly=False
+        while answered_easy9_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_easy[8])
+
+            nine_e=input("\n>")
+            if nine_e not in correct_ones_easy:
+                print("\nINCORRECT! Please try again.\n")
+            elif nine_e in correct_ones_easy:
+                print("\nCorrect!")
+                answered_easy9_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+            
+#Medium difficulty setting of the game
+
+
+
+    if Dif == 'M' or Dif == 'm':
+
+       
+
+        print (Name," You are now playing the Medium difficulty level.")
+        print ("")
+        Ready = input("Enter (Y) to begin, or (M) to return to the main menu\n>")
+
+        while Ready != 'Y' and Ready != 'y' and Ready != 'M' and Ready != 'm':
+            Ready = input("If you're ready to start please press (Y) or press (M) to go back to the main menu: ")
+
+        if Ready == 'M' or Ready == 'm':
+            FMain ()
+
+        else:
+            Ready == 'Y' or Ready == 'y'
+            print ("\nLets begin.")
+
+        #Medium questions tuple
+        solutions_medium = [ ("Rhythm", "Rhythym", "Rythm"), ("Supacede", "Supersede", "Supercede"), ("Pharoh", "Phaoroh", "Pharaoh"),
+                           ("Liaison", "Liason", "Liaisan"), ("Occurred", "Ocurred", "Occured"), ("Cemetary", "Cematary", "Cemetery"),
+                           ("Wierd", "Weired", "Weird"), ("Playwrite", "Playwright", "Playright"), ("Ecstasy", "Ecstacy", "Extasy") ]
+        #correct answers for medium list
+        correct_ones_medium=["Rhythm", "rhythm", "Supercede", "supercede", "Pharoah", "pharaoh", "Liaison", "liaison", "Occurred"
+                             "occurred", "Cemetary", "cemetary", "Weird", "weird", "Playwright", "playwright", "Ecstasy", "ecstasy"]
+
+        #Shuffling of medium solutions/questions tuple
+        random.shuffle (solutions_medium)
+
+        #questions for easy level begins here
+
+        #Medium Question 1
+        print("Question 1:")
+        answered_medium1_correctly=False
+        while answered_medium1_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[0])
+
+            one_m=input("\n>")
+            if one_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif one_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium1_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 2
+        print("Question 2:")
+        answered_medium2_correctly=False
+        while answered_medium2_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[1])
+
+            two_m=input("\n>")
+            if two_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif two_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium2_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 3
+        print("Question 3:")
+        answered_medium3_correctly=False
+        while answered_medium3_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[2])
+
+            three_m=input("\n>")
+            if three_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif three_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium3_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 4
+        print("Question 4:")
+        answered_medium4_correctly=False
+        while answered_medium4_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[3])
+
+            four_m=input("\n>")
+            if four_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif four_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium4_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 5
+        print("Question 5:")
+        answered_medium5_correctly=False
+        while answered_medium5_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[4])
+
+            five_m=input("\n>")
+            if five_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif five_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium5_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 6
+        print("Question 6:")
+        answered_medium6_correctly=False
+        while answered_medium6_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[5])
+
+            six_m=input("\n>")
+            if six_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif six_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium6_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 7
+        print("Question 7:")
+        answered_medium7_correctly=False
+        while answered_medium7_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[6])
+
+            seven_m=input("\n>")
+            if seven_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif seven_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium7_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 8
+        print("Question 8:")
+        answered_medium8_correctly=False
+        while answered_medium8_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[7])
+
+            eight_m=input("\n>")
+            if eight_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif eight_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium8_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Medium Question 9
+        print("Question 9:")
+        answered_medium9_correctly=False
+        while answered_medium9_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_medium[8])
+
+            nine_m=input("\n>")
+            if nine_m not in correct_ones_medium:
+                print("\nINCORRECT! Please try again.\n")
+            elif nine_m in correct_ones_medium:
+                print("\nCorrect!")
+                answered_medium9_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+                
+#Hard difficulty setting of the game    
+    
+
+            
+    else:
+        Dif == 'H' or Dif == 'h'
+
+
+        print (Name," You are now playing the Hard difficulty level.")
+        print ("")
+        Ready = input("Enter (Y) to begin, or (M) to return to the main menu\n>")
+
+        while Ready != 'Y' and Ready != 'y' and Ready != 'M' and Ready != 'm':
+            Ready = input("If you're ready to start please press (Y) or press (M) to go back to the main menu: ")
+
+        if Ready == 'M' or Ready == 'm':
+            FMain ()
+
+        else:
+            Ready == 'Y' or Ready == 'y'
+            print ("\nLets begin.")
+
+
+        #multiple-questions for hard level tuple
+        solutions_hard = [("Accomodate", "Acomodate", "Accommadate"), ("Maintanence", "Maintainence", "Maintenence"),
+                          ("Convalece", "Convalesce", "Convelace"), ("Caribbean", "Carribean", "Caribean"),
+                          ("Embarrass", "Emberress", "Emberras"), ("Deductable", "Deducteble", "Deductible"),
+                          ("Pronounciation", "Pronunciation", "Prunounciation"), ("Cemetary", "Cematary", "Cemetery"),
+                          ("Conscience", "Consence", "Conscious"), ("Hankerchief", "Hankachief", "Handkerchief"), ("Iliterate", "Illiterate", "Ilitarate"),
+                          ("Supercalifrajilistickexpialidocious", "Supercalifragilisticexpialidocious", "Supacalifragilisticexpialidocious")]
+        #correct answers list for hard level
+        correct_ones_hard=["Accommodate", "accommodate", "Maintenance", "maintenance", "Convalesce", "convalesce", "Caribbean", "caribbean",
+                           "Embarrass", "embarrass", "Deductible", "deductible", "Pronunciation", "pronunciation", "Cemetery", "cemetery",
+                           "Conscience", "conscience", "Handkerchief", "handkerchief", "Illiterate", "illiterate", "Supercalifragilisticexpialidocious",
+                           "supercalifragilisticexpialidocious"]
+
+        #Shuffling of hard solutions/questions tuple
+        random.shuffle (solutions_hard)
+
+
+        #questions for hard level begins here
+
+        #Hard Question 1
+        print("Question 1:")
+        answered_hard1_correctly=False
+        while answered_hard1_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[0])
+
+            one_h=input("\n>")
+            if one_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif one_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard1_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 2
+        print("Question 2:")
+        answered_hard2_correctly=False
+        while answered_hard2_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[1])
+
+            two_h=input("\n>")
+            if two_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif two_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard2_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 3
+        print("Question 3:")
+        answered_hard3_correctly=False
+        while answered_hard3_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[2])
+
+            three_h=input("\n>")
+            if three_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif three_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard3_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 4
+        print("Question 4:")
+        answered_hard4_correctly=False
+        while answered_hard4_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[3])
+
+            four_h=input("\n>")
+            if four_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif four_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard4_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 5
+        print("Question 5:")
+        answered_hard5_correctly=False
+        while answered_hard5_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[4])
+
+            five_h=input("\n>")
+            if five_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif five_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard5_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 6
+        print("Question 6:")
+        answered_hard6_correctly=False
+        while answered_hard6_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[5])
+
+            six_h=input("\n>")
+            if six_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif six_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard6_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+
+        #Hard Question 7
+        print("Question 7:")
+        answered_hard7_correctly=False
+        while answered_hard7_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[6])
+
+            seven_h=input("\n>")
+            if seven_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif seven_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard7_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 8
+        print("Question 8:")
+        answered_hard8_correctly=False
+        while answered_hard8_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[7])
+
+            eight_h=input("\n>")
+            if eight_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif eight_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard8_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 9
+        print("Question 9:")
+        answered_hard9_correctly=False
+        while answered_hard9_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[8])
+
+            nine_h=input("\n>")
+            if nine_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif nine_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard9_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 10
+        print("Question 10:")
+        answered_hard10_correctly=False
+        while answered_hard10_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[9])
+
+            ten_h=input("\n>")
+            if ten_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif ten_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard10_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 11
+        print("Question 11:")
+        answered_hard11_correctly=False
+        while answered_hard11_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[10])
+
+            eleven_h=input("\n>")
+            if eleven_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif eleven_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard11_correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        #Hard Question 12
+        print("Question 12:")
+        answered_hard12_correctly=False
+        while answered_hard12_correctly==False:
+            
+            print("\nWhich is correct? Please type the correct answer\n")
+            print (solutions_hard[11])
+
+            twelve_h=input("\n>")
+            if twelve_h not in correct_ones_hard:
+                print("\nINCORRECT! Please try again.\n")
+            elif twelve_h in correct_ones_hard:
+                print("\nCorrect!")
+                answered_hard12
+                _correctly=True
+                Player_score += 1
+                print("")
+                print ("Congratulations,", (Name), ", you earned 1 point!\n")
+                print ("You now have: "+str(Player_score)+" points!")
+                print("")
+
+        
+
+FMain ()
+
