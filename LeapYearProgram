@@ -1,5 +1,7 @@
+#Module: Introductury Programming and Problem Solving
 #Coding Challenge 2: Decision Making
-#A program that prints the number of days in a calendar month
+#A program that prints the number of days in a calendar month. If the month of February is specified, it asks for the year
+#and calculates whether it was a leap year
 
 
 #Elizabeth Austin
