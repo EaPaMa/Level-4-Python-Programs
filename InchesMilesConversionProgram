@@ -1,8 +1,10 @@
 #Module: Introductory Programming and Problem Solving
-#Coding Challenge 3: Inches to Miles Conversion Program
+#Coding Challenge 3: Iteration
+
 
 #Elizabeth Austin
 #SN: 1725049
+#Inches to Miles Conversion Program
 
 
 print("Welcome. This program will convert distances (Inches/Miles)\nEnter (I) to convert Inches to Miles\nEnter (M) to convert Miles to Inches")
