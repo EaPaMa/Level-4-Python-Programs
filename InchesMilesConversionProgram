@@ -1,0 +1,50 @@
+#Module: Introductory Programming and Problem Solving
+#Coding Challenge 3: Inches to Miles Conversion Program
+
+#Elizabeth Austin
+#SN: 1725049
+
+
+print("Welcome. This program will convert distances (Inches/Miles)\nEnter (I) to convert Inches to Miles\nEnter (M) to convert Miles to Inches")
+
+
+answered = False
+selection = input("Enter selection: ")
+# While loop so that it keeps asking the selection variable question
+# until the user inputs either an I or an M
+
+while answered != True:
+    # for inches conversion (I) if they type I/i
+    if selection == "I" or selection == "i":
+
+        #this bit of code will escape the while loop
+        answered = True
+
+        #user input of how many inches to convert
+        inches=float(input("Enter distance to convert (in Inches): "))
+
+        # Inches to Miles conversion calculation
+        i_conversion=inches/63360
+
+        #printing the answer
+        print(inches, "Inches equals", format(i_conversion, ".8f"), "Miles")
+
+    # for miles conversion (M) if they type M/m
+    elif selection == "M" or selection == "m":
+
+        #this bit of code will escape the while loop
+        answered = True
+
+        #user input of how many miles to convert
+        miles=float(input("Enter distance to convert (in Miles): "))
+
+        # Miles to inches conversion calculation
+        m_conversion=miles*63360
+
+        #printing the answer
+        print(miles, "Miles equals", format(m_conversion, ".6g"), "Inches")
+
+    else:
+        #this bit will keep looping until they've entered I or M
+        selection = input("Please enter 'I' or 'M': ")
+
